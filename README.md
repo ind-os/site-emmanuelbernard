@@ -18,8 +18,9 @@ docker run --rm -p 8080:80 site-emmanuelbernard   # http://localhost:8080
   l'argument de build facultatif `GIT_SHA`, « inconnu » sans lui.
 - Aucune variable d'environnement.
 
-Sur le serveur d'AVQNOS, Coolify construit l'image à un commit de ce dépôt
-(build pack Dockerfile).
+Sur le serveur d'AVQNOS, le kit d'Indos fait construire l'image par ce
+`Dockerfile`, à un commit de ce dépôt (`GIT_SHA` vaut ce commit), puis Coolify
+la sert.
 
 ## Travailler dessus
 
