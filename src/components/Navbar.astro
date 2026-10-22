@@ -1,0 +1,58 @@
+---
+import MobileMenu from "./MobileMenu.jsx";
+
+const currentPath = Astro.url.pathname;
+---
+
+<nav class="border-b border-gray-200">
+    <div class="max-w-4xl mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+            <a
+                href="/"
+                class="text-xl font-semibold tracking-tight text-gray-900 hover:text-gray-600 transition-colors"
+            >
+                Starter Kit
+            </a>
+
+            {/* Desktop Navigation */}
+            <div class="hidden md:flex gap-8">
+                <a
+                    href="/"
+                    class:list={[
+                        "text-sm font-medium transition-colors",
+                        currentPath === "/"
+                            ? "text-gray-900"
+                            : "text-gray-500 hover:text-gray-900",
+                    ]}
+                >
+                    Home
+                </a>
+                <a
+                    href="/about"
+                    class:list={[
+                        "text-sm font-medium transition-colors",
+                        currentPath === "/about"
+                            ? "text-gray-900"
+                            : "text-gray-500 hover:text-gray-900",
+                    ]}
+                >
+                    About
+                </a>
+                <a
+                    href="/contact"
+                    class:list={[
+                        "text-sm font-medium transition-colors",
+                        currentPath === "/contact"
+                            ? "text-gray-900"
+                            : "text-gray-500 hover:text-gray-900",
+                    ]}
+                >
+                    Contact
+                </a>
+            </div>
+
+            {/* Mobile Menu */}
+            <MobileMenu currentPath={currentPath} client:load />
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,60 @@
+---
+import "../styles/global.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+}
+
+const {
+  title = "Emmanuel Bernard - Consultant-formateur en AI Automation & expert n8n, Lausanne, Suisse Romande",
+  description = "Expert en automatisation n8n et intelligence artificielle basé à Lausanne. J'accompagne les agences et équipes pour décupler leur productivité.",
+  image = "https://cdn.avqn.ch/images/website/aussi-vite-que-necessaire.jpg",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- SEO -->
+    <title>{title}</title>
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="profile" />
+    <meta property="og:image" content={image} />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={image} />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Font Optimization: Preload Critical Fonts -->
+    <link
+      rel="preload"
+      href="https://cdn.avqn.ch/fonts/ClashDisplay-Bold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="https://cdn.avqn.ch/fonts/GeneralSans-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="font-sans antialiased bg-white text-gray-900 min-h-screen">
+    <slot />
+  </body>
+</html>

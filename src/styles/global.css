@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@theme {
+    --font-sans: "General Sans", "Inter", system-ui, -apple-system, sans-serif;
+    --font-display: "Clash Display", "Inter", system-ui, -apple-system, sans-serif;
+
+    --color-primary-50: #FFE5EF;
+    --color-primary-100: #FFCCE0;
+    --color-primary-200: #FF99C1;
+    --color-primary-300: #FF66A2;
+    --color-primary-400: #FF5C8A;
+    --color-primary-500: #FF5C8A;
+    --color-primary-600: #FF2E6E;
+    --color-primary-700: #FF0052;
+    --color-primary-800: #CC0042;
+    --color-primary-900: #990032;
+}
+
+/* Fonts Setup */
+@font-face {
+    font-family: 'General Sans';
+    src: url('https://cdn.avqn.ch/fonts/GeneralSans-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'General Sans';
+    src: url('https://cdn.avqn.ch/fonts/GeneralSans-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'General Sans';
+    src: url('https://cdn.avqn.ch/fonts/GeneralSans-Semibold.woff2') format('woff2');
+    font-weight: 600;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'General Sans';
+    src: url('https://cdn.avqn.ch/fonts/GeneralSans-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Clash Display';
+    src: url('https://cdn.avqn.ch/fonts/ClashDisplay-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Clash Display';
+    src: url('https://cdn.avqn.ch/fonts/ClashDisplay-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Clash Display';
+    src: url('https://cdn.avqn.ch/fonts/ClashDisplay-Semibold.woff2') format('woff2');
+    font-weight: 600;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Clash Display';
+    src: url('https://cdn.avqn.ch/fonts/ClashDisplay-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+}
+
+@layer base {
+    body {
+        font-family: var(--font-sans);
+        @apply bg-primary-50 text-gray-900 antialiased selection:bg-primary-500 selection:text-white;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: var(--font-display);
+    }
+}

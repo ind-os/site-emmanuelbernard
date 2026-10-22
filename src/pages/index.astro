@@ -1,0 +1,198 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const links = [
+  {
+    title: "Aussi Vite Que Nécessaire",
+    url: "https://avqn.ch",
+    icon: "🌐",
+  },
+  {
+    title: "LinkedIn",
+    url: "https://www.linkedin.com/in/emmbernard",
+    icon: "💼",
+  },
+  {
+    title: "YouTube",
+    url: "https://www.youtube.com/@emmanuelflux",
+    icon: "🎥",
+  },
+];
+---
+
+<BaseLayout>
+  <!-- Main Container: Full screen height, centered content but with a grid layout -->
+  <main
+    class="min-h-screen w-full flex items-center justify-center p-4 sm:p-8 bg-white selection:bg-black selection:text-white"
+  >
+    <!-- Grid Wrapper: Max width restriction for large screens, grid on desktop -->
+    <div
+      class="w-full max-w-6xl grid grid-cols-1 lg:grid-cols-12 border border-black"
+    >
+      <!-- LEFT COLUMN: Profile & Bio (Spans 5 cols) -->
+      <div
+        class="lg:col-span-5 border-b lg:border-b-0 lg:border-r border-black flex flex-col justify-between min-h-[500px]"
+      >
+        <!-- Main Content Area -->
+        <div class="p-8 sm:p-12 flex-1 flex flex-col justify-between">
+          <!-- Header / Avatar -->
+          <div>
+            <div
+              class="w-48 mb-8 bg-gradient-to-br from-[#FFE4D9] to-[#FFD6CC] rounded-3xl overflow-hidden shadow-2xl shadow-rose-900/20"
+            >
+              <img
+                src="https://cdn.avqn.ch/photos/manu/manu-left.webp"
+                alt="Emmanuel Bernard"
+                class="w-full h-auto object-cover grayscale object-top mix-blend-multiply"
+              />
+            </div>
+
+            <h1
+              class="text-4xl sm:text-5xl font-extrabold tracking-tighter text-black mb-4 uppercase leading-[0.9]"
+            >
+              Emmanuel<br />Bernard
+            </h1>
+          </div>
+
+          <!-- Body -->
+          <div class="space-y-6">
+            <h2
+              class="text-xl font-bold border-l-4 border-black pl-4 py-1 leading-snug"
+            >
+              Consultant-formateur<br />AI Automation &<br />Expert n8n à
+              Lausanne
+            </h2>
+
+            <p
+              class="text-lg text-black font-medium leading-relaxed max-w-sm text-balance"
+            >
+              Avec 20 ans d'expérience technique, j'accompagne les équipes et
+              agences pour automatiser leurs processus et prototyper leurs idées
+              grâce à l'IA.
+            </p>
+          </div>
+        </div>
+
+        <!-- Footer (Moved from Right Col) -->
+        <div
+          class="border-t border-black bg-gray-50 p-6 flex items-center justify-between text-xs font-mono uppercase tracking-widest text-black/50"
+        >
+          <span>© {new Date().getFullYear()} Emmanuel Bernard</span>
+          <span>Lausanne, CH</span>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN: Links Broken Grid (Spans 7 cols) -->
+      <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2">
+        <!-- Link Block 1: Agency Site (Full Width) -->
+        <a
+          href="https://avqn.ch"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group relative sm:col-span-2 border-b border-black p-8 sm:p-12 hover:bg-black hover:text-white transition-colors duration-300 flex flex-col justify-center min-h-[240px]"
+        >
+          <span
+            class="text-sm font-bold uppercase tracking-widest mb-2 opacity-60 group-hover:opacity-80"
+            >AVQN.CH</span
+          >
+          <span
+            class="text-3xl sm:text-4xl font-black uppercase leading-none tracking-tighter mb-4"
+            >Aussi Vite<br />Que Nécessaire</span
+          >
+          <p
+            class="text-sm sm:text-base font-medium max-w-sm mt-auto border-l-2 border-current pl-3 opacity-90"
+          >
+            Découvrez mes services en<br />AI Automation et n8n
+          </p>
+          <div class="absolute top-6 right-6">
+            <span class="text-4xl font-light">↗</span>
+          </div>
+        </a>
+
+        <!-- Link Block 2: The AI Atelier -->
+        <a
+          href="https://www.skool.com/the-ai-atelier/about"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group relative border-b sm:border-r border-black p-8 hover:bg-black hover:text-white transition-colors duration-300 flex flex-col justify-between min-h-[200px]"
+        >
+          <div class="absolute top-6 right-6">
+            <span class="text-2xl font-light">↗</span>
+          </div>
+          <div class="mt-auto">
+            <span class="block text-2xl font-bold mb-1">The AI Atelier</span>
+            <span class="text-xs uppercase opacity-60">Skool Community</span>
+          </div>
+        </a>
+
+        <!-- Link Block 3: Your Video Engine -->
+        <a
+          href="https://www.yourvideoengine.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group relative border-b border-black p-8 hover:bg-black hover:text-white transition-colors duration-300 flex flex-col justify-between min-h-[200px]"
+        >
+          <div class="absolute top-6 right-6">
+            <span class="text-2xl font-light">↗</span>
+          </div>
+          <div class="mt-auto">
+            <span class="block text-2xl font-bold mb-1">Your Video Engine</span>
+            <span class="text-xs uppercase opacity-60"
+              >AI Avatar video Generator</span
+            >
+          </div>
+        </a>
+
+        <!-- Link Block 4: LinkedIn -->
+        <a
+          href="https://www.linkedin.com/in/emmbernard"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group relative border-b sm:border-r border-black p-8 hover:bg-black hover:text-white transition-colors duration-300 flex flex-col justify-between min-h-[200px]"
+        >
+          <div class="absolute top-6 right-6">
+            <span class="text-2xl font-light">↗</span>
+          </div>
+          <div class="mt-auto">
+            <span class="block text-2xl font-bold mb-1">LinkedIn</span>
+            <span class="text-xs uppercase opacity-60">Connectons-nous</span>
+          </div>
+        </a>
+
+        <!-- Link Block 5: YouTube -->
+        <a
+          href="https://www.youtube.com/@emmanuelflux"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group relative border-b border-black p-8 hover:bg-black hover:text-white transition-colors duration-300 flex flex-col justify-between min-h-[200px]"
+        >
+          <div class="absolute top-6 right-6">
+            <span class="text-2xl font-light">↗</span>
+          </div>
+          <div class="mt-auto">
+            <span class="block text-2xl font-bold mb-1">YouTube</span>
+            <span class="text-xs uppercase opacity-60">Tutoriels & Démos</span>
+          </div>
+        </a>
+
+        <!-- Link Block 6: n8n -->
+        <a
+          href="https://n8n.io/creators/n8ninja/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group relative sm:col-span-2 p-8 hover:bg-black hover:text-white transition-colors duration-300 flex flex-col justify-between min-h-[200px]"
+        >
+          <div class="absolute top-6 right-6">
+            <span class="text-2xl font-light">↗</span>
+          </div>
+          <div class="mt-auto">
+            <span class="block text-2xl font-bold mb-1">Mes Workflows n8n</span>
+            <span class="text-xs uppercase opacity-60"
+              >Profil Créateur & Modèles</span
+            >
+          </div>
+        </a>
+      </div>
+    </div>
+  </main>
+</BaseLayout>
